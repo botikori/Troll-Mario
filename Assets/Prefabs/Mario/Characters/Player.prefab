@@ -55,6 +55,7 @@ MonoBehaviour:
   moveSpeed: 10
   jumpHeight: 15
   groundCheckRaycastDistance: 0.1
+  gravityScale: 4
   animator: {fileID: 7821818527061154522}
 --- !u!1001 &1941973283228989754
 PrefabInstance:
@@ -158,6 +159,10 @@ PrefabInstance:
     - target: {fileID: 4604236012500131401, guid: b2ce1f570bcdb91629ce8cb6854d2b05, type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604236012500131401, guid: b2ce1f570bcdb91629ce8cb6854d2b05, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7340042023385947288, guid: b2ce1f570bcdb91629ce8cb6854d2b05, type: 3}
       propertyPath: m_Size.x
