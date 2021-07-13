@@ -53,10 +53,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  jumpHeight: 15
+  jumpHeight: 19
   groundCheckRaycastDistance: 0.1
   gravityScale: 4
   animator: {fileID: 7821818527061154522}
+  jumpSound: {fileID: 0}
+  jumpDelay: 0.3
 --- !u!1001 &1941973283228989754
 PrefabInstance:
   m_ObjectHideFlags: 0

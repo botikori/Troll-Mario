@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Mario
 {
-    public class LuckyBlock : Tile
+    public class HitableTile : Tile
     {
         private void OnTriggerEnter2D(Collider2D other)
         {

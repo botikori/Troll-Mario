@@ -1,22 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &5722006115518224633
+--- !u!114 &5263118366741232805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901957056169705310}
+  m_GameObject: {fileID: 879179665041088106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749a2c33c926e6667ac81dc270eb3ab2, type: 3}
+  m_Script: {fileID: 11500000, guid: 56f83c56540663389ab0aa27af30309e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hopAnimationTime: 1
-  prefabToSpawn: {fileID: 0}
-  spawnOffset: 1
-  openedSprite: {fileID: 7810936717752353743, guid: a42ae21b7927d3272bcde6a33751a755, type: 3}
---- !u!1001 &7592967752927285550
+  collisionBox: {fileID: 1287886604390386339}
+--- !u!1001 &2226678211985125402
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -81,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1357194504351575664, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
       propertyPath: m_Name
-      value: Lucky Block
+      value: Hidden Block
       objectReference: {fileID: 0}
     - target: {fileID: 7377698677904484804, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
       propertyPath: m_RootOrder
@@ -130,15 +127,20 @@ PrefabInstance:
     - target: {fileID: 9103699069413431008, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6936079216851816805, guid: a42ae21b7927d3272bcde6a33751a755, type: 3}
+      objectReference: {fileID: 7810936717752353743, guid: a42ae21b7927d3272bcde6a33751a755, type: 3}
     - target: {fileID: 9103699069413431008, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
---- !u!1 &8901957056169705310 stripped
+--- !u!1 &879179665041088106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1357194504351575664, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
-  m_PrefabInstance: {fileID: 7592967752927285550}
+  m_PrefabInstance: {fileID: 2226678211985125402}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1287886604390386339 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1097116901178735289, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
+  m_PrefabInstance: {fileID: 2226678211985125402}
   m_PrefabAsset: {fileID: 0}

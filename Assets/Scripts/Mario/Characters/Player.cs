@@ -7,7 +7,7 @@ namespace Mario
     {
         [SerializeField] private Animator animator;
         [SerializeField] private AudioClip jumpSound;
-        [SerializeField] private float jumpDelay = 0.1f;
+        [SerializeField] private float jumpDelay = 0.3f;
         private float _moveInput;
         private bool _canJump = true;
 
