@@ -7,6 +7,7 @@ namespace Mario
     public abstract class Character : MonoBehaviour
     {
         [SerializeField] protected float moveSpeed = 10f;
+
         [SerializeField] protected float jumpHeight = 17f;
 
         protected Rigidbody2D _rigidbody;

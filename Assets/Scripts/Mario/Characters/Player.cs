@@ -6,11 +6,16 @@ namespace Mario
     public class Player : Character
     {
         [SerializeField] private Animator animator;
+        
         [SerializeField] private AudioClip jumpSound;
         [SerializeField] private float jumpDelay = 0.3f;
+        
+        [SerializeField] private int maxFallDistance = -50;
+
         private float _moveInput;
         private bool _canJump = true;
 
+        #region Jump
         protected override void Jump()
         {
             if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
@@ -30,8 +35,22 @@ namespace Mario
             yield return new WaitForSeconds(jumpDelay);
             _canJump = true;
         }
+        #endregion
 
-        
+        protected override void Update()
+        {
+            base.Update();
+
+            if (transform.position.y < maxFallDistance)
+            {
+                Die();
+            }
+        }
+
+        public void Die()
+        {
+            Debug.Log("im ded");
+        }
 
         protected override void Move()
         {
