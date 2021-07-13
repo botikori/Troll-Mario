@@ -30,17 +30,6 @@ namespace Mario
             Move();
         }
 
-        protected virtual void Jump()
-        {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
-            {
-                if (IsGrounded())
-                {
-                    _rigidbody.velocity = Vector2.up * jumpHeight;
-                }
-            }
-        }
-
         protected bool IsGrounded()
         {
             RaycastHit2D raycastHit = Physics2D.BoxCast(_boxCollider.bounds.center, _boxCollider.bounds.size, 0, Vector2.down, 0.1f);
@@ -48,6 +37,7 @@ namespace Mario
             return raycastHit.collider != null;
         }
 
+        protected abstract void Jump();
         protected abstract void Move();
     }
 }
