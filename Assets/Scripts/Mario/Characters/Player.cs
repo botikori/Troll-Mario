@@ -49,7 +49,8 @@ namespace Mario
 
         public void Die()
         {
-            Debug.Log("im ded");
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            gameManager.GameOver();
         }
 
         protected override void Move()
