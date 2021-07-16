@@ -1,5 +1,5 @@
+using MenuManagement;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Mario
 {
@@ -15,7 +15,8 @@ namespace Mario
 
         public void GameOver()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Time.timeScale = 0f;
+            GameOverMenu.Open();
         }
 
         public void GameWin()
@@ -32,7 +33,6 @@ namespace Mario
         private void LoadCheckpoint()
         {
             int loadedCheckpointIndex = PlayerPrefs.GetInt("CheckpointIndex");
-            //if(loadedCheckpointIndex == null) {return;}    
 
             Player player = FindObjectOfType<Player>();
             Checkpoint[] checkpoints = FindObjectsOfType<Checkpoint>();

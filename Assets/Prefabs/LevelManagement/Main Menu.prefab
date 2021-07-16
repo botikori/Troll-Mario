@@ -341,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233733596701785887, guid: 48ff603b931d58d0d81e4fe5c3ff0990, type: 3}
       propertyPath: m_Text
-      value: MAIN MENU
+      value: TROLL MARIO
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48ff603b931d58d0d81e4fe5c3ff0990, type: 3}

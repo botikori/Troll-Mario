@@ -25,7 +25,6 @@ namespace MenuManagement
         {
             Time.timeScale = 1;
             LevelLoader.LoadMainMenu();
-
             MainMenu.Open();
         }
 

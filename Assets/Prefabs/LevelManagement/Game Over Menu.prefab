@@ -19,6 +19,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7233733595973840710, guid: 48ff603b931d58d0d81e4fe5c3ff0990, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18396229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233733595973840710, guid: 48ff603b931d58d0d81e4fe5c3ff0990, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2150072
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233733595973840710, guid: 48ff603b931d58d0d81e4fe5c3ff0990, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7233733596147769136, guid: 48ff603b931d58d0d81e4fe5c3ff0990, type: 3}
       propertyPath: m_Name
       value: Game Over Menu

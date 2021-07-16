@@ -1,4 +1,5 @@
 using LevelManagement;
+using UnityEngine;
 
 namespace MenuManagement
 {
@@ -6,12 +7,14 @@ namespace MenuManagement
     {
         public void OnRestartPressed()
         {
-            base.OnBackPressed();
+            Time.timeScale = 1;
             LevelLoader.ReloadLevel();
+            GameMenu.Open();
         }
 
         public void OnMainMenuPressed()
         {
+            Time.timeScale = 1;
             LevelLoader.LoadMainMenu();
             MainMenu.Open();
         }
