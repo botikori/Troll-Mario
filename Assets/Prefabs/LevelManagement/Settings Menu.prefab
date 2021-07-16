@@ -587,6 +587,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4069045968967960327, guid: 90023f50ef4e7bed0aec0fbf7f21141b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3615478684582018112}
+    - target: {fileID: 4069045968967960327, guid: 90023f50ef4e7bed0aec0fbf7f21141b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBackPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069045968967960327, guid: 90023f50ef4e7bed0aec0fbf7f21141b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuManagement.SettingsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4069045968979074022, guid: 90023f50ef4e7bed0aec0fbf7f21141b, type: 3}
       propertyPath: m_Text
       value: BACK
