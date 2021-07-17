@@ -1,23 +1,26 @@
+using Mario;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+namespace Mario
 {
-    [SerializeField] private AudioClip musicToPlay;
-
-    public static void PlaySound(AudioClip soundToPlay)
+    public class SoundManager : Singleton<SoundManager>
     {
-        if (soundToPlay != null)
+        // Audio players components.
+        [SerializeField] private AudioSource effectsSource;
+        [SerializeField] private AudioSource musicSource;
+
+        // Play a single clip through the sound effects source.
+        public void Play(AudioClip clip)
         {
-            GameObject soundGameObject = new GameObject("Sound");
-            AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-            audioSource.PlayOneShot(soundToPlay); 
+            effectsSource.clip = clip;
+            effectsSource.Play();
         }
-    }
 
-    private void PlayMusic()
-    {
-        if (musicToPlay != null)
+        // Play a single clip through the music source.
+        public void PlayMusic(AudioClip clip)
         {
+            musicSource.clip = clip;
+            musicSource.Play();
         }
     }
 }

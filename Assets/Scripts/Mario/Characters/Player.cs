@@ -23,7 +23,7 @@ namespace Mario
                 if (IsGrounded() && _canJump)
                 {
                     _rigidbody.velocity = Vector2.up * jumpHeight;
-                    SoundManager.PlaySound(jumpSound);
+                    SoundManager.Instance.Play(jumpSound);
                     StartCoroutine(JumpDelay());
                 }
             }
