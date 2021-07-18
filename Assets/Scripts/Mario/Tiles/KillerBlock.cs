@@ -6,11 +6,14 @@ namespace Mario
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Player player = FindObjectOfType<Player>();
-
-            if (player != null)
+            if (other.gameObject.CompareTag("Player")) ;
             {
-                player.Die();
+                Player player = FindObjectOfType<Player>();
+
+                if (player != null)
+                {
+                    player.Die();
+                }
             }
         }
     }

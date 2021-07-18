@@ -20,9 +20,9 @@ namespace Mario
         {
             if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
             {
-                if (IsGrounded() && _canJump)
+                if (GetIsGrounded() && _canJump)
                 {
-                    _rigidbody.velocity = Vector2.up * jumpHeight;
+                    Rigidbody.velocity = Vector2.up * jumpHeight;
                     SoundManager.Instance.Play(jumpSound);
                     StartCoroutine(JumpDelay());
                 }
@@ -56,7 +56,7 @@ namespace Mario
         protected override void Move()
         {
             _moveInput = Input.GetAxisRaw("Horizontal");
-            _rigidbody.velocity = new Vector2(_moveInput * moveSpeed, _rigidbody.velocity.y);
+            Rigidbody.velocity = new Vector2(_moveInput * moveSpeed, Rigidbody.velocity.y);
 
             if (animator != null)
             {
@@ -66,7 +66,7 @@ namespace Mario
         
         public Vector3 GetMoveDirection()
         {
-            Vector3 localVelocity = transform.InverseTransformDirection(_rigidbody.velocity);
+            Vector3 localVelocity = transform.InverseTransformDirection(Rigidbody.velocity);
             return localVelocity;
         }
     }

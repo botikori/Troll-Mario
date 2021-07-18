@@ -10,19 +10,19 @@ namespace Mario
 
         [SerializeField] protected float jumpHeight = 17f;
 
-        protected Rigidbody2D _rigidbody;
-        protected BoxCollider2D _boxCollider;
+        protected Rigidbody2D Rigidbody;
+        protected BoxCollider2D BoxCollider;
 
         [SerializeField] protected float groundCheckRaycastDistance = 0.1f;
         [SerializeField] private float gravityScale = 4;
-        protected bool _isGrounded;
+        protected bool IsGrounded;
 
         protected virtual void Awake()
         {
-            _rigidbody = GetComponent<Rigidbody2D>();
-            _boxCollider = GetComponent<BoxCollider2D>();
+            Rigidbody = GetComponent<Rigidbody2D>();
+            BoxCollider = GetComponent<BoxCollider2D>();
 
-            _rigidbody.gravityScale = gravityScale;
+            Rigidbody.gravityScale = gravityScale;
         }
 
         protected virtual void Update()
@@ -31,9 +31,9 @@ namespace Mario
             Move();
         }
 
-        protected bool IsGrounded()
+        protected bool GetIsGrounded()
         {
-            RaycastHit2D raycastHit = Physics2D.BoxCast(_boxCollider.bounds.center, _boxCollider.bounds.size, 0, Vector2.down, 0.1f);
+            RaycastHit2D raycastHit = Physics2D.BoxCast(BoxCollider.bounds.center, BoxCollider.bounds.size, 0, Vector2.down, 0.1f);
 
             return raycastHit.collider != null;
         }
