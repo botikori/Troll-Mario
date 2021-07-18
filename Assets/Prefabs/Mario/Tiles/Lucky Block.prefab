@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749a2c33c926e6667ac81dc270eb3ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: 3ef866e0faab0337cb533816011c156b, type: 3}
   hopAnimationTime: 1
   prefabToSpawn: {fileID: 0}
   spawnOffset: 1

@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 namespace Mario
@@ -7,12 +6,15 @@ namespace Mario
     {
         private bool isHidden = true;
         [SerializeField] private BoxCollider2D collisionBox;
+        [SerializeField] private AudioClip hitSound;
         private SpriteRenderer _spriteRenderer;
+        private Player _player;
 
         private void Awake() 
         {
             _spriteRenderer = GetComponent<SpriteRenderer>();
-
+            _player = FindObjectOfType<Player>();
+            
             ToggleBlock(false);
         }
 
@@ -30,9 +32,10 @@ namespace Mario
 
         public void BlockHit()
         {
-            if (isHidden)
+            if (isHidden && _player.GetMoveDirection().y > 0)
             {
                 isHidden = false;
+                SoundManager.Instance.Play(hitSound);
                 ToggleBlock(true);
             }
         }

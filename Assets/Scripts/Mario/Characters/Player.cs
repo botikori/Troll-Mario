@@ -63,5 +63,11 @@ namespace Mario
                 animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
             }
         }
+        
+        public Vector3 GetMoveDirection()
+        {
+            Vector3 localVelocity = transform.InverseTransformDirection(_rigidbody.velocity);
+            return localVelocity;
+        }
     }
 }

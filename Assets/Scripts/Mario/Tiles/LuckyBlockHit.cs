@@ -5,6 +5,7 @@ namespace Mario
 {
     public class LuckyBlockHit : MonoBehaviour, IBlockHit
     {
+        [SerializeField] private AudioClip hitSound;
         [SerializeField] private float hopAnimationTime = 1f;
         [SerializeField] private GameObject prefabToSpawn;
         [SerializeField] private float spawnOffset = 1f;
@@ -17,7 +18,8 @@ namespace Mario
             if (!isOpen)
             {
                 isOpen = true;
-
+                
+                SoundManager.Instance.Play(hitSound);
                 SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
 
                 if (spriteRenderer != null)

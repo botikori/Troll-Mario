@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionBox: {fileID: 1287886604390386339}
+  hitSound: {fileID: 8300000, guid: 851c739002d96f940b118048042f94ed, type: 3}
 --- !u!1001 &2226678211985125402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20,6 +21,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 204700127758684577, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 204700127758684577, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
@@ -47,6 +52,10 @@ PrefabInstance:
     - target: {fileID: 204700127758684577, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097116901178735289, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1097116901178735289, guid: 99e86b8d432f370b9a244f86175bb678, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
