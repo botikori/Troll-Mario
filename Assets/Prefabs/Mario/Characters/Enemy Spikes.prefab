@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2760134983921663511
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5135605134022045692}
-  m_Layer: 0
-  m_Name: Left Side
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5135605134022045692
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2760134983921663511}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.665, y: -1.098, z: -1.4629568}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5274862323511122458}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6252367918762143792
 Rigidbody2D:
   serializedVersion: 4
@@ -67,38 +37,8 @@ MonoBehaviour:
   jumpHeight: 17
   groundCheckRaycastDistance: 0.1
   gravityScale: 4
-  leftSideRaycast: {fileID: 5135605134022045692}
-  rightSideRaycast: {fileID: 1343889792772891398}
---- !u!1 &7395893924704342441
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1343889792772891398}
-  m_Layer: 0
-  m_Name: Right Side
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1343889792772891398
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7395893924704342441}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.528, y: -1.058, z: -1.4629568}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5274862323511122458}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  leftSideRaycast: {fileID: 0}
+  rightSideRaycast: {fileID: 0}
 --- !u!1001 &3611430396220352840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,15 +158,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Spikes
       objectReference: {fileID: 0}
+    - target: {fileID: 9020072443355831367, guid: 7f334e966b0da0611af1b952b26d39ba, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f334e966b0da0611af1b952b26d39ba, type: 3}
 --- !u!1 &5707147970449814799 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9020072443355831367, guid: 7f334e966b0da0611af1b952b26d39ba, type: 3}
-  m_PrefabInstance: {fileID: 3611430396220352840}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5274862323511122458 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8875033122530128722, guid: 7f334e966b0da0611af1b952b26d39ba, type: 3}
   m_PrefabInstance: {fileID: 3611430396220352840}
   m_PrefabAsset: {fileID: 0}

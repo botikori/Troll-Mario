@@ -45,6 +45,8 @@ namespace Mario
             {
                 Die();
             }
+
+            animator.SetBool("IsGrounded", GetIsGrounded());
         }
 
         public void Die()

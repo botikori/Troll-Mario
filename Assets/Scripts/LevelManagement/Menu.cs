@@ -29,7 +29,7 @@ namespace MenuManagement
             else
             {
                 _instance = (T)this;
-                DontDestroyOnLoad(gameObject);
+                //DontDestroyOnLoad(gameObject);
             }
         }
         

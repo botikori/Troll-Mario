@@ -11,9 +11,9 @@ namespace Mario
 
         protected override void Update()
         {
-            base.Update();
+            //base.Update();
 
-            //TurnAround();
+            TurnAround();
         }
 
         protected override void Move()
@@ -23,32 +23,11 @@ namespace Mario
 
         protected override void Jump()
         {
-            
         }
 
         private void TurnAround()
         {
-            if (GetIsGrounded())
-            {
-                if (_direction.y > 0)
-                {
-                    RaycastHit2D hit = Physics2D.Raycast(new Vector2(leftSideRaycast.position.x, leftSideRaycast.position.y), Vector2.down, groundCheckRaycastDistance);
-
-                    if (hit.collider == null)
-                    {
-                        _direction = Vector2.left;
-                    }
-                }
-                else
-                {
-                    RaycastHit2D hit = Physics2D.Raycast(new Vector2(rightSideRaycast.position.x, rightSideRaycast.position.y), Vector2.down, groundCheckRaycastDistance);
-
-                    if (hit.collider == null)
-                    {
-                        _direction = Vector2.right;
-                    }
-                }
-            }
+            
         }
     }
 }
