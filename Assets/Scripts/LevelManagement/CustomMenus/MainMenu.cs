@@ -1,9 +1,7 @@
 using System.Collections;
 using LevelManagement;
 using LevelManagement.Utilities;
-using MenuManagement.Data;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace MenuManagement
 {

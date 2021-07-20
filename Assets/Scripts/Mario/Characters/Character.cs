@@ -16,17 +16,27 @@ namespace Mario.Characters
         [SerializeField] protected float groundCheckRaycastDistance = 0.1f;
         [SerializeField] private float gravityScale = 4;
         protected bool IsGrounded;
+        private bool _isDisabled = false;
 
         protected virtual void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
+            
             BoxCollider = GetComponent<BoxCollider2D>();
 
             Rigidbody.gravityScale = gravityScale;
         }
 
+        public virtual void Disable()
+        {
+            _isDisabled = true;
+            Rigidbody.velocity = new Vector2(0, 0);
+            Rigidbody.gravityScale = 0;
+        }
+        
         protected virtual void Update()
         {
+            if (_isDisabled) { return; }
             Jump();
             Move();
         }

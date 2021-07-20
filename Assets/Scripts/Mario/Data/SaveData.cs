@@ -1,21 +1,22 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine.Serialization;
 
-namespace MenuManagement.Data
+namespace Mario.Data
 {
     [Serializable]
     public class SaveData
     {
         public float musicVolume;
         public float soundEffectsVolume;
-
-        public string hashValue;
-
+        public List<int> unlockedLevels;
+            
+            
         public SaveData()
         {
             musicVolume = 1;
             soundEffectsVolume = 1;
-            hashValue = "";
+            unlockedLevels = new List<int>();
         }
     }
 }

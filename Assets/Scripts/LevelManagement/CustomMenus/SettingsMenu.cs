@@ -1,6 +1,7 @@
+using Mario;
+using Mario.Data;
 using UnityEngine;
 using UnityEngine.UI;
-using MenuManagement.Data;
 
 namespace MenuManagement
 {
@@ -9,55 +10,28 @@ namespace MenuManagement
         [SerializeField] private Slider musicVolumeSlider;
         [SerializeField] private Slider soundEffectsVolumeVolumeSlider;
 
-        private DataManager _dataManager;
-
-        protected override void Awake()
-        {
-            base.Awake();
-            _dataManager = FindObjectOfType<DataManager>();
-        }
-
         public void Start()
         {
-
-            LoadData();
-        }
-
-        public void OnMusicVolumeChanged(float volume)
-        {
-            if (_dataManager != null)
-            {
-                _dataManager.MusicVolume = volume;
-            }
-        }
-
-        public void OnSoundEffectsVolumeChanged(float volume)
-        {
-            if (_dataManager != null)
-            {
-                _dataManager.SoundEffectsVolume = volume;
-            }
+            musicVolumeSlider.value = DataManager.Instance.MusicVolume;
+            soundEffectsVolumeVolumeSlider.value = DataManager.Instance.SoundEffectsVolume;
         }
 
         public override void OnBackPressed()
         {
+            DataManager.Instance.Save();
             base.OnBackPressed();
-            if (_dataManager != null)
-            {
-                _dataManager.Save();
-            }
         }
 
-        public void LoadData()
+        public void OnMusicVolumeChanged(float volume)
         {
-            if (musicVolumeSlider == null || soundEffectsVolumeVolumeSlider == null || _dataManager == null)
-            {
-                return;
-            }
-            _dataManager.Load();
+            DataManager.Instance.MusicVolume = volume;
+            SoundManager.Instance.UpdateVolumes();
+        }
 
-            musicVolumeSlider.value = _dataManager.MusicVolume;
-            soundEffectsVolumeVolumeSlider.value = _dataManager.SoundEffectsVolume;
+        public void OnSoundEffectsVolumeChanged(float volume)
+        {
+            DataManager.Instance.SoundEffectsVolume = volume;
+            SoundManager.Instance.UpdateVolumes();
         }
     }
 }

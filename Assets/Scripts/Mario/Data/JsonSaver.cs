@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MenuManagement.Data
+namespace Mario.Data
 {
     public class JsonSaver
     {
@@ -33,11 +33,13 @@ namespace MenuManagement.Data
             {
                 using (StreamReader reader = new  StreamReader(GetSavePath()))
                 {
+                    Debug.Log(GetSavePath());
                     string json = reader.ReadToEnd();
                     JsonUtility.FromJsonOverwrite(json, saveData);
                 }
                 return true;
             }
+            
             return false;
         }
 

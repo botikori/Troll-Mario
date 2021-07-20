@@ -1,8 +1,8 @@
-using UnityEngine;
+using System.Collections.Generic;
 
-namespace MenuManagement.Data
+namespace Mario.Data
 {
-    public class DataManager : MonoBehaviour
+    public class DataManager : Singleton<DataManager>
     {
         private SaveData _saveData;
         private JsonSaver _jsonSaver;
@@ -19,10 +19,20 @@ namespace MenuManagement.Data
             set { _saveData.soundEffectsVolume = value; }
         }
 
-        private void Awake()
+        public List<int> UnlockedLevels
         {
+            get { return _saveData.unlockedLevels; }
+            set { _saveData.unlockedLevels = value; }
+        }
+
+        public override void Awake()
+        {
+            base.Awake();
+            
             _saveData = new SaveData();
             _jsonSaver = new JsonSaver();
+            
+            Load();
         }
 
         public void Save()
@@ -30,7 +40,7 @@ namespace MenuManagement.Data
             _jsonSaver.Save(_saveData);
         }
 
-        public void Load()
+        private void Load()
         {
             _jsonSaver.Load(_saveData);
         }

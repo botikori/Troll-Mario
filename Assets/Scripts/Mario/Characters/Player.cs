@@ -51,6 +51,7 @@ namespace Mario.Characters
 
         public void Die()
         {
+            Disable();
             GameManager gameManager = FindObjectOfType<GameManager>();
             gameManager.GameOver();
         }

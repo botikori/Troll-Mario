@@ -1,4 +1,6 @@
+using System;
 using Mario;
+using Mario.Data;
 using UnityEngine;
 
 namespace Mario
@@ -8,6 +10,17 @@ namespace Mario
         // Audio players components.
         [SerializeField] private AudioSource effectsSource;
         [SerializeField] private AudioSource musicSource;
+
+        private void Start()
+        {
+            UpdateVolumes();
+        }
+
+        public void UpdateVolumes()
+        {
+            effectsSource.volume = DataManager.Instance.SoundEffectsVolume;
+            musicSource.volume = DataManager.Instance.MusicVolume;
+        }
 
         // Play a single clip through the sound effects source.
         public void Play(AudioClip clip)

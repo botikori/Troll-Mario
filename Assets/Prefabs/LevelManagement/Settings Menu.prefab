@@ -197,6 +197,14 @@ PrefabInstance:
       propertyPath: m_Text
       value: MUSIC VOLUME
       objectReference: {fileID: 0}
+    - target: {fileID: 7604707039373843802, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3615478684582018112}
+    - target: {fileID: 7604707039373843802, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMusicVolumeChanged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
 --- !u!224 &7234968116492251648 stripped
@@ -473,6 +481,18 @@ PrefabInstance:
     - target: {fileID: 7392265918908646464, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
       propertyPath: m_Text
       value: FX VOLUME
+      objectReference: {fileID: 0}
+    - target: {fileID: 7604707039373843802, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7604707039373843802, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3615478684582018112}
+    - target: {fileID: 7604707039373843802, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSoundEffectsVolumeChanged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a05e9ca208f1c2797fc571adc9dfbc, type: 3}
