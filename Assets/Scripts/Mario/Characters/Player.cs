@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace Mario
+namespace Mario.Characters
 {
     public class Player : Character
     {

@@ -1,19 +1,20 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace Mario.Tiles
 {
-    public class HitableTile : Tile
+    public class Castle : Tile
     {
         private void OnTriggerEnter2D(Collider2D other)
         {
+            
             if (other.gameObject.CompareTag("Player"))
             {
-                IBlockHit blockHit = GetComponent<IBlockHit>();
+                Debug.Log("smthing entered");
+                GameManager gameManager = FindObjectOfType<GameManager>();
 
-                if (blockHit != null)
+                if (gameManager != null)
                 {
-                    blockHit.BlockHit();
+                    gameManager.GameWin();
                 }
             }
         }

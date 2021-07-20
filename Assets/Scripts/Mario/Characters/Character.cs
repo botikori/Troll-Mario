@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mario
+namespace Mario.Characters
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]

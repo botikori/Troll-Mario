@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mario
+namespace Mario.Tiles
 {
     public abstract class Tile : MonoBehaviour
     {

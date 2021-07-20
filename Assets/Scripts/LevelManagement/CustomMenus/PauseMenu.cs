@@ -6,7 +6,7 @@ namespace MenuManagement
 {
     public class PauseMenu : Menu<PauseMenu>
     {
-        [SerializeField] private int mainMenuBuildIndex = 0;
+        //[SerializeField] private int mainMenuBuildIndex = 0;
         
         public void OnResumePressed()
         {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Mario
+namespace Mario.Characters
 {
     public abstract class Enemy : Character
     {

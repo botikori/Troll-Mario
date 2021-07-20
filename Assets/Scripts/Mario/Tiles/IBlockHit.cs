@@ -1,4 +1,4 @@
-namespace Mario
+namespace Mario.Tiles
 {
     public interface IBlockHit
     {

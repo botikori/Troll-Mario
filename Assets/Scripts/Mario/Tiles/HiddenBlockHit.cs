@@ -1,6 +1,7 @@
 using UnityEngine;
+using Mario.Characters;
 
-namespace Mario
+namespace Mario.Tiles
 {
     public class HiddenBlockHit : MonoBehaviour, IBlockHit
     {

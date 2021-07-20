@@ -1,12 +1,11 @@
 
 using UnityEngine;
 
-namespace Mario
+namespace Mario.Tiles
 {
     public class LuckyBlockHit : MonoBehaviour, IBlockHit
     {
         [SerializeField] private AudioClip hitSound;
-        [SerializeField] private float hopAnimationTime = 1f;
         [SerializeField] private GameObject prefabToSpawn;
         [SerializeField] private float spawnOffset = 1f;
         [SerializeField] private Sprite openedSprite;

@@ -1,15 +1,25 @@
-using UnityEngine;
 using LevelManagement;
-using LevelManagement.Utilities;
 
 namespace MenuManagement
 {
-    public class LevelCompleteMenu : GameOverMenu
+    public class LevelCompleteMenu : Menu<LevelCompleteMenu>
     {
         public void OnNextLevelPressed()
         {
             base.OnBackPressed();
             LevelLoader.LoadNextLevel();
+        }
+        
+        public void OnRestartPressed()
+        {
+            LevelLoader.ReloadLevel();
+            GameMenu.Open();
+        }
+
+        public void OnMainMenuPressed()
+        {
+            LevelLoader.LoadMainMenu();
+            MainMenu.Open();
         }
     }
 }
